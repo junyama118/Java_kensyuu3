@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
 @Controller
@@ -19,7 +20,7 @@ public class StudentController {
 
     @GetMapping("/")
     public String index(Model model) {
-        Optional<Student> byId2 = studentRepository.findByName("三原 菜奈");
+        ArrayList<Student> byId2 = studentRepository.findByName("三原 菜奈");
         model.addAttribute("student", byId2.orElse(new Student()));
         return "student";
     }
