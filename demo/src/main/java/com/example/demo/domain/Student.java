@@ -11,7 +11,7 @@ public class Student {
     private int society_score;
     private int english_score;
     private Timestamp created_at;
-    private Timestamp update_at;
+    private Timestamp updated_at;
 
     public String getName() {
         return name;
@@ -77,11 +77,11 @@ public class Student {
         this.created_at = created_at;
     }
 
-    public Timestamp getUpdate_at() {
-        return update_at;
+    public Timestamp getUpdated_at() {
+        return updated_at;
     }
 
-    public void setUpdate_at(Timestamp update_at) {
-        this.update_at = update_at;
+    public void setUpdated_at(Timestamp updated_at) {
+        this.updated_at = updated_at;
     }
 }

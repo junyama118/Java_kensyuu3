@@ -21,7 +21,7 @@ public class StudentController {
     @GetMapping("/")
     public String index(Model model) {
         ArrayList<Student> byId2 = studentRepository.findAll();
-        System.out.println(byId2.get(0).getCreated_at());
+        System.out.println(byId2.get(0).getJapanese_score());
         model.addAttribute("students", byId2);
         return "student";
     }
