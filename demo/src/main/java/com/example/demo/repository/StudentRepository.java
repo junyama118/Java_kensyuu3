@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
 
@@ -13,6 +14,6 @@ import java.util.Optional;
 @Mapper
 public interface StudentRepository {
 
-    @Select("SELECT * FROM students WHERE name = #{name}")
-    Optional<Student> findByName(String name);
+    @Select("SELECT * FROM students")
+    ArrayList<Student> findAll();
 }

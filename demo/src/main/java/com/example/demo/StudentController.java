@@ -20,8 +20,9 @@ public class StudentController {
 
     @GetMapping("/")
     public String index(Model model) {
-        ArrayList<Student> byId2 = studentRepository.findByName("三原 菜奈");
-        model.addAttribute("student", byId2.orElse(new Student()));
+        ArrayList<Student> byId2 = studentRepository.findAll();
+        System.out.println(byId2.get(0).getCreated_at());
+        model.addAttribute("students", byId2);
         return "student";
     }
 }
